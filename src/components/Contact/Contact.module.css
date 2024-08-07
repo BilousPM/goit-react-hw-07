@@ -1,0 +1,20 @@
+.wrapper {
+  width: 300px;
+  border: 2px solid rgb(239, 8, 8);
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 4px rgb(221, 214, 214, 0.3);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: rgb(227, 24, 24);
+  color: aliceblue;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 4px rgb(221, 214, 214, 0.3);
+}
+
+.icon {
+  margin-right: 5px;
+}

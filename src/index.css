@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: rgb(28, 27, 27);
+  color: aliceblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+}

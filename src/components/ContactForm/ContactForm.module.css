@@ -1,0 +1,36 @@
+.formwrapper {
+  margin: 20px auto;
+  width: 350px;
+}
+.form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 28px 40px;
+  border: 2px solid rgb(239, 8, 8);
+  box-shadow: 1px 1px 8px 8px rgb(221, 214, 214, 0.3);
+  & button {
+    background-color: rgb(227, 24, 24);
+    color: aliceblue;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 4px rgb(221, 214, 214, 0.3);
+  }
+}
+
+.error {
+  color: rgb(136, 255, 0);
+  font-weight: 600;
+}
+.label {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  & span {
+    font-weight: bold;
+  }
+}
+.input {
+  padding: 6px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 4px rgb(221, 214, 214, 0.3);
+}
