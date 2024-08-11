@@ -15,9 +15,13 @@ const ContactList = () => {
 
   return (
     <div className={s.wrapper}>
-      {filtredContact.map(contact => (
-        <Contact key={contact.id} contact={contact} id={contact.id} />
-      ))}
+      {filtredContact.length ? (
+        filtredContact.map(contact => (
+          <Contact key={contact.id} contact={contact} id={contact.id} />
+        ))
+      ) : (
+        <h1>No Contacts in your phone book</h1>
+      )}
     </div>
   );
 };
