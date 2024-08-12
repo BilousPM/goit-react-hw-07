@@ -1,9 +1,5 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import {
-  addContactThunk,
-  deleteContactThunk,
-  fetchContactsThunk,
-} from '../contactsOps';
+import { addContact, deleteContact, fetchContacts } from '../contactsOps';
 
 const initialState = {
   items: [],
@@ -16,24 +12,24 @@ const slice = createSlice({
   initialState,
   extraReducers: builder => {
     builder
-      .addCase(fetchContactsThunk.fulfilled, (state, action) => {
+      .addCase(fetchContacts.fulfilled, (state, action) => {
         state.items = action.payload;
         state.loading = false;
       })
-      .addCase(deleteContactThunk.fulfilled, (state, action) => {
+      .addCase(deleteContact.fulfilled, (state, action) => {
         state.items = state.items.filter(item => item.id !== action.payload);
         state.loading = false;
       })
 
-      .addCase(addContactThunk.fulfilled, (state, action) => {
+      .addCase(addContact.fulfilled, (state, action) => {
         state.items.push(action.payload);
         state.loading = false;
       })
       .addMatcher(
         isAnyOf(
-          fetchContactsThunk.pending,
-          deleteContactThunk.pending,
-          addContactThunk.pending,
+          fetchContacts.pending,
+          deleteContact.pending,
+          addContact.pending,
         ),
         (state, action) => {
           state.loading = true;
@@ -42,9 +38,9 @@ const slice = createSlice({
       )
       .addMatcher(
         isAnyOf(
-          fetchContactsThunk.rejected,
-          deleteContactThunk.rejected,
-          addContactThunk.rejected,
+          fetchContacts.rejected,
+          deleteContact.rejected,
+          addContact.rejected,
         ),
         (state, action) => {
           state.loading = false;
@@ -53,9 +49,9 @@ const slice = createSlice({
       )
       .addMatcher(
         isAnyOf(
-          fetchContactsThunk.fulfilled,
-          deleteContactThunk.fulfilled,
-          addContactThunk.fulfilled,
+          fetchContacts.fulfilled,
+          deleteContact.fulfilled,
+          addContact.fulfilled,
         ),
         (state, action) => {
           state.loading = false;
