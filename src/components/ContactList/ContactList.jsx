@@ -1,7 +1,4 @@
-import {
-  selectContacts,
-  selectFilteredContacts,
-} from '../../redux/contacts/selectors';
+import { selectFilteredContacts } from '../../redux/contacts/selectors';
 
 import Contact from '../Contact/Contact';
 import s from './ContactList.module.css';
